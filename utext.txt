@@ -1,0 +1,88 @@
+Document Search Agent
+You are an helpful agent who provides useful information from the uploaded documents only. You will not answer any questions that are not related to the documents. You will only provide information from the documents and will not make up any information. If you do not find any relevant information in the documents, you will say "I don't know" and nothing else. You will only use the information from the documents to answer questions. You will not provide any additional information or context. You will only provide the relevant information from the documents. Keep your answers concise and to the point. If the documents contain multiple relevant pieces of information, provide all of them in a single response. Do not provide any additional commentary or explanations.
+Also show the name of document that you referenced in the response.
+
+Web Search Agent
+You are an helpful agent who rephrases the websearch output and provides a concise result. You will not answer any questions that are not related to the user's query. You will only provide information from the web and will not make up any information. If you do not find any relevant information on the web, you will say "I don't know" and nothing else. You will only use the information from the web to answer questions. You will only provide the relevant information from the web. Keep your answers concise and to the point. If the web contains multiple relevant pieces of information, provide all of them in a single response. Do not provide any additional commentary or explanations.
+
+
+Summerizer Agent
+You are an helpful agent who summarizes the inputs given to you into meaningful and understandable way. You will not answer any questions that are not related to the documents. Keep the answers concise.
+
+
+Queries:
+_____________
+
+
+How has Microsoft current debt level compared to its historical debt levels in last 3 quarters?  ==> Index created in AI Search
+
+How has Microsoft dividend policy evolved in last 1 year and what are the prospects for future dividends? ==? Index
+
+what do the Microsoft's financial ratios (such as P/E, ROE, ROAE) reveal about the financial health and performance in last 3 quarters? ==> Fine tuned Model
+
+How does Microsoft's Return-On-Equity compare to its Net Income Margin and what does this say about its efficiency in generating profits from shareholders equity? ==> Fine tuned Model
+
+conda create --name agents-for-beginners python=3.12 -y
+
+
+
+_________________________________
+
+
+Solving Conda issue with pwsh 7.5 in vscode
+
+i had the same issue on new windows and new powershell and new conda install
+running the 2 lines of code above in powershell fixed it for me
+Remove-Item Env:_CE_M
+Remove-Item Env:_CE_CONDA
+
+
+
+===================================
+
+
+
+# Watermark
+%load_ext watermark
+%watermark -a "Kanhaiya" -udvmt
+%watermark -iv
+
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+az login --tenant 16b3c013-d300-468d-ac64-7eda0820b6d3
+
+C:/ProgramData/miniconda3/Scripts/activate
+
+conda activate ai-foundry
+
+pip install uv
+uv pip install azure-ai-evaluation[redteam] termcolor==2.5.0 azure-identity openai
+uv pip install -r requirements.txt
+
+create a useful streamlit app to visualize the data and make it more interactive for datascience projects. Ensure that the code is executable.
+write a poen on a water body in the style of Robert Frost
+write a funny book review on hitchhikers guide to galaxy book
+
+
+https://kanfoundryswed8685743017.openai.azure.com/openai/deployments/gpt-4o/chat/completions
+
+https://endpoint-name.openai.azure.com/openai/deployments/deployment-name/chat/completions
+========================================================================
+
+How has Microsoft current debt level compared to its historical debt levels?  ==> Index created in AI Search
+
+How has their dividend policy evolved and what are the prospects for future dividends? ==? Index
+
+what do the Microsoft's financial ratios (such as P/E, ROE, ROAE) reveal about the financial health and performance in last 3 quarters? ==> Fine tuned Model
+
+How does Microsoft's Return-On-Equity compare to its Net Income Margin and what does this say about its efficiency in generating profits from shareholders equity? ==> Fine tuned Model
+
+
+Look into the file "travel-agents-sk.py" to learn how to create Azure Ai agents using Microsoft Semantic Kernel and Azure AI Agent Service. Then look into the file "agents-with-tracing.py" to learn how to enable and send telemetry data to Azure Ai foundry where the data is logged data is sent to Azure monitor.
+
+Ater studying the two files, the create a new python project code to create a multi agent scenerio using Microsoft semnatic kernel and Azure AI Agent service which simulates the scenerio of a new bank accont openeing for a new customer. Create few agents focused on one specific area to get this done.
+
+Ensure all of the telemetry and logging data is sent to azure Ai foundry as you saw in the file "agents-with-tracing.py"
